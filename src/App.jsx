@@ -51,8 +51,8 @@ function App() {
         handleResetFeedback={handleResetFeedback}
         totalFeedback={totalFeedback}
       />
-      <Notification message={"No feedback yet"} />
-      {totalFeedback > 0 && (
+      {totalFeedback === 0 && <Notification message={"No feedback yet"} />}
+      {totalFeedback !== 0 && (
         <Feedback
           feedbackValues={feedbackValues}
           totalFeedback={totalFeedback}

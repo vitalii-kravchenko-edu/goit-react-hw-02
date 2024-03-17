@@ -1,3 +1,5 @@
+import styles from "./Feedback.module.css";
+
 const Feedback = ({ feedbackValues, totalFeedback, positiveFeedbackRate }) => {
   return (
     <div>
@@ -5,7 +7,7 @@ const Feedback = ({ feedbackValues, totalFeedback, positiveFeedbackRate }) => {
         <li>Good: {feedbackValues.good}</li>
         <li>Neutral: {feedbackValues.neutral}</li>
         <li>Bad: {feedbackValues.bad}</li>
-        <li>Total: {totalFeedback}</li>
+        <li className={styles.total}>Total: {totalFeedback}</li>
         <li>Positive: {positiveFeedbackRate}%</li>
       </ul>
     </div>
